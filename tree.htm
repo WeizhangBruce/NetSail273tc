@@ -1,0 +1,104 @@
+<HTML>
+<HEAD>
+<TITLE>Tree(Javascript)</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function Display(id){
+	if(document.all){
+		if(document.all.item(id).style.display == "block"){
+			document.all.item(id).style.display = "none";
+		}else if(document.all.item(id).style.display == "none"){
+			document.all.item(id).style.display = "block";
+		}
+	}else if(document.getElementById){
+		if(document.getElementById(id).style.display == "block"){
+			document.getElementById(id).style.display = "none";
+		}else if(document.getElementById(id).style.display == "none"){
+			document.getElementById(id).style.display = "block";
+		}
+	}
+}
+//-->
+</SCRIPT>
+<STYLE TYPE="text/css">
+	<!--
+	A:link	{ text-decoration:none;color:#4169e1;font-weight:bold }
+	A:visited { text-decoration:none;color:#4169e1;font-weight:bold }
+	A:hover   { text-decoration:none;color:#FF0000;font-weight:bold }
+	-->
+</STYLE></HEAD>
+<BODY BGCOLOR="#f5deb3"><BR><BR><BR><BR><DIV ALIGN="LEFT">
+
+<A HREF="JavaScript:onClick=Display('display0');">概要</A><BR>
+<DIV ID="display0" STYLE="display:none">
+　　<a href="how.html" target="content">遊び方</a><BR>
+　　<a href="explanation.html" target="content">画面詳細</a><BR>
+</DIV>
+<A HREF="JavaScript:onClick=Display('display1');">画面説明</A><BR>
+<DIV ID="display1" STYLE="display:none">
+　　<a href="content.htm#dis1" target="content">マップと船</a><BR>
+　　<a href="content.htm#dis2" target="content">ステータス</a><BR>
+　　<a href="content.htm#dis3" target="content">艦隊</a><BR>
+　　<a href="content.htm#dis4" target="content">履歴</a><BR>
+　　<a href="content.htm#dis5" target="content">事件</a><BR>
+　　<a href="content.htm#dis6" target="content">手紙</a><BR>
+　　<a href="content.htm#dis7" target="content">Profile</a><BR>
+</DIV>
+<A HREF="JavaScript:onClick=Display('display2');">港</A><BR>
+<DIV ID="display2" STYLE="display:none">
+　　<a href="content.htm#port1" target="content">港とエリア</a><BR>
+　　<a href="content.htm#port2" target="content">移動</a><BR>
+</DIV>
+<A HREF="JavaScript:onClick=Display('display3');">交易品</A><BR>
+<DIV ID="display3" STYLE="display:none">
+　　<a href="content.htm#trade1" target="content">購入</a><BR>
+　　<a href="content.htm#trade2" target="content">売却</a><BR>
+　　<a href="content.htm#trade3" target="content">物価</a><BR>
+</DIV>
+<A HREF="JavaScript:onClick=Display('display4');">造船所</A><BR>
+<DIV ID="display4" STYLE="display:none">
+　　<a href="content.htm#yard1" target="content">購入</a><BR>
+　　<a href="content.htm#yard2" target="content">売却</a><BR>
+　　<a href="content.htm#yard3" target="content">修理</a><BR>
+</DIV>
+<A HREF="JavaScript:onClick=Display('display5');">酒場</A><BR>
+<DIV ID="display5" STYLE="display:none">
+　　<a href="content.htm#bar1" target="content">水夫</a><BR>
+　　<a href="content.htm#bar2" target="content">食料</a><BR>
+　　<a href="content.htm#bar3" target="content">冒険情報</a><BR>
+　　<a href="content.htm#bar4" target="content">来店者</a><BR>
+</DIV>
+<A HREF="JavaScript:onClick=Display('display6');">町</A><BR>
+<DIV ID="display6" STYLE="display:none">
+　　<a href="content.htm#city1" target="content">買い物</a><BR>
+　　<a href="content.htm#city2" target="content">町銀行</a><BR>
+　　<a href="content.htm#city3" target="content">町破壊</a><BR>
+　　<A HREF="JavaScript:onClick=Display('display7');">町新設</A><BR>
+	<DIV ID="display7" STYLE="display:none">
+　　　　<a href="content.htm#city4" target="content">町管理</a><BR>
+　　　　<a href="content.htm#city5" target="content">率変更</a><BR>
+　　　　<a href="content.htm#city6" target="content">宣伝文</a><BR>
+　　　　<a href="content.htm#city7" target="content">再命名</a><BR>
+	</DIV>
+</DIV>
+<A HREF="JavaScript:onClick=Display('display8');">襲撃</A><BR>
+<DIV ID="display8" STYLE="display:none">
+　　<a href="content.htm#bat1" target="content">襲撃する</a><BR>
+　　<a href="content.htm#bat2" target="content">襲撃される</a><BR>
+　　<a href="content.htm#bat3" target="content">戦術</a><BR>
+　　<a href="content.htm#bat4" target="content">戦闘アルゴリズム</a><BR>
+</DIV>
+<A HREF="JavaScript:onClick=Display('display10');">Lv</A><BR>
+<DIV ID="display10" STYLE="display:none">
+　　<a href="content.htm#lv1" target="content">冒険Lv</a><BR>
+　　<a href="content.htm#lv2" target="content">海賊Lv</a><BR>
+　　<a href="content.htm#lv3" target="content">商人Lv</a><BR>
+</DIV>
+<A HREF="JavaScript:onClick=Display('display9');">システム</A><BR>
+<DIV ID="display9" STYLE="display:none">
+　　<a href="content.htm#sys1" target="content">セーブ</a><BR>
+　　<a href="content.htm#sys2" target="content">自己削除</a><BR>
+</DIV>
+
+</BODY>
+</HTML>
