@@ -1,24 +1,24 @@
-<html><head><title>ReadMe</title></head>
+<html><head><title>讀我</title></head>
 <body bgcolor=#f5deb3 text=#000000><br><br>
-<center><h2>ネット航海時代・ReadMe</h2></center>
+<center><h2>網路航海時代・讀我</h2></center>
 <blockquote>
-ネット航海時代は作者が未熟であるため、設置は難しいかもしれません。<br><br>
-そのことをご了承の上、設置を試みてください。<br><br>
+由於「網路航海時代」的作者仍不成熟，安裝設定可能會比較困難。<br><br>
+請在理解這一點之後，再嘗試安裝。<br><br>
 <UL>
-<LI>ネット航海時代とは<br><br>
-大航海時代を背景としたCGIのネット・シミュレーションゲームです。<br>
-海賊王・冒険王・交易王を目指すもよし、町などを作って港を盛り上げるも良し、自由にプレイできるシミュレーションゲームです。<br><br>
+<LI>什麼是網路航海時代<br><br>
+這是一款以大航海時代為背景的 CGI 網路模擬遊戲。<br>
+你可以以成為海賊王、冒險王或交易王為目標，也可以建設城鎮等來讓港口更加繁榮，是一款能自由遊玩的模擬遊戲。<br><br>
 <br>
-<LI>利用規定<br><br>
-必ず<a href="http://red-treasure.com/NetCastle/">「Net Castle スクリプト利用規定」</a>をお読み下さい。<br>
-ダウンロードされた方は利用規定に同意されたものと見なします。<br><br>
+<LI>使用規定<br><br>
+請務必閱讀<a href="http://red-treasure.com/NetCastle/">「Net Castle 腳本使用規定」</a>。<br>
+下載本程式者，視為已同意使用規定。<br><br>
 <br>
-<LI>内容<br><br>
-解凍すると以下のものが入っているはずです。<pre>
-sea.cgi		本体
-new.cgi		新規登録用スクリプト
-list.cgi		プレイヤーリスト等用スクリプト
-setting.cgi	以下サブスクリプト
+<LI>內容<br><br>
+解壓縮後應包含以下項目。<pre>
+sea.cgi		主程式
+new.cgi		新規註冊用腳本
+list.cgi		玩家列表等用途的腳本
+setting.cgi	以下為子腳本
 bar.cgi
 battle.cgi
 cadmin.cgi
@@ -34,116 +34,115 @@ rank.cgi
 sys.cgi
 test.cgi
 trade.cgi
-yard.cgi		ここまでサブスクリプト
-jcode.pl		日本語ライブラリ
-event.dat		事件書き込み用データ
-index.html	ダミーファイル
-explanation.html	簡単な画面説明
-how.html		簡単な遊び方
-ReadMe.htm	今参照しているファイル
-dataフォルダ	エリアデータ、アイテムデータ、冒険情報データを格納
-imgフォルダ	画像ファイルを格納
-for guild.LZH	ギルド用圧縮ファイル
+yard.cgi		子腳本到此為止
+jcode.pl		日文函式庫
+event.dat		事件寫入用資料
+index.html	虛擬檔案
+explanation.html	簡單的畫面說明
+how.html		簡單的遊玩方式
+ReadMe.htm	目前正在參閱的檔案
+data 資料夾	存放區域資料、道具資料、冒險情報資料
+img 資料夾	存放圖片檔案
+for guild.LZH	公會用壓縮檔
 <br>
 </pre>
-<LI>設置ディレクトリ例<br><br><pre>
+<LI>安裝目錄範例<br><br><pre>
           cgi-bin
             └ sea(777 or 707)
                 ├ sea.cgi(755)
                 ├ new.cgi(755)
                 ├ list.cgi(755)
                 ├ admin.cgi(755)
-                ├ その他.cgi(644)
+                ├ 其他 .cgi(644)
                 ├ index.html
-                ├ imgディレクトリ
-                │  └ 画像ファイル
-                ├ usrdirディレクトリ(777 or 707)(名前は変更してください)
-                ├ cityディレクトリ(777 or 707)(名前は変更してください)
-                ├ dataディレクトリ(777 or 707)(名前は変更してください)
-                │   └ datファイル(1001～1009.datは666、それ以外は644)
+                ├ img 目錄
+                │  └ 圖片檔案
+                ├ usrdir 目錄(777 or 707)(請變更名稱)
+                ├ city 目錄(777 or 707)(請變更名稱)
+                ├ data 目錄(777 or 707)(請變更名稱)
+                │   └ dat 檔案(1001～1009.dat 為 666，其他為 644)
                 ├ event.dat(666)
                 └ jcode.pl(644)
 </pre>
 <br><br>
-<LI>スクリプトの設定<br><br>
-sea.cgi、new.cgi、list.cgi、setting.cgiは変更する必要があります。<br>
-スクリプト内に説明がありますので基本的には中を見て設定してください。<br>
-ここでは特に重要な部分を注意しておきます。<br><br>
-まずsea.cgi、new.cgi、list.cgiにおいて<br>
-一行目の<br>
+<LI>腳本設定<br><br>
+sea.cgi、new.cgi、list.cgi、setting.cgi 需要修改。<br>
+腳本內有說明，基本上請查看內容後進行設定。<br>
+這裡特別提醒幾個重要部分。<br><br>
+首先在 sea.cgi、new.cgi、list.cgi 中，<br>
+第一行的<br>
 #!/usr/bin/perl<br>
-をサーバに合わせて変更してください。<br>
-通常は　#!/usr/bin/perl　か　#!/usr/local/bin/perl　のどちらかです。<br><br>
-setting.iniにおいて<br>
+請依照伺服器環境修改。<br>
+通常是　#!/usr/bin/perl　或　#!/usr/local/bin/perl　其中之一。<br><br>
+在 setting.ini 中，<br>
 $adps = '0123';<br>
-「0123」を変更してください。管理人パスワードです。<br><br>
+請變更「0123」。這是管理員密碼。<br><br>
 $usrdir  = 'usrdir';<br>
 $datadir = 'data';<br>
 $citydir = 'city';<br>
-それぞれ各自のディレクトリ設定に従って変更してください。<br><br>
+請依照各自的目錄設定分別修改。<br><br>
 $lockkey = 2;<br>
-ファイルのロックをするかどうかです。2で上手く作動しない場合1を試してください。<br><br>
+這是設定是否進行檔案鎖定。如果設為 2 無法正常運作，請嘗試設為 1。<br><br>
 <br>
-ギルド制度を設けていて、プロフィールに所属ギルドを表示させたい場合は、<br>
-「for guild.LZH」に入っているintro.cgiとlist.cgiに差し替えてください。<br><br>
+若有設置公會制度，且想在個人資料中顯示所屬公會，<br>
+請替換為「for guild.LZH」中的 intro.cgi 與 list.cgi。<br><br>
 <br>
-<LI>アクセス<br><br>
-sea.cgiにリンクしてください。<br><br>
+<LI>存取<br><br>
+請連結到 sea.cgi。<br><br>
 <br>
-<LI>サポート<br><br>
-<a href="http://www.kosumi.vxx.jp/">Net Castle</a>のサポート掲示板にてサポートいたしますが、<br>
-必ずしも回答できるものではありませんので、あらかじめご了承下さい。<br><br>
+<LI>支援<br><br>
+可於 <a href="http://www.kosumi.vxx.jp/">Net Castle</a> 的支援留言板取得支援，<br>
+但不保證一定能得到回覆，敬請事先諒解。<br><br>
 <br>
-<LI>応用<br><br>
-冒険情報、船、交易品等はデータフォルダのデータを変更することで<br>
-自由に追加・削除できます。<br>
-まず、冒険情報について説明します。<br><br>
-例えばcow.datの中を覗くと<br>
-<nobr><b>1009,115,4,「バッファロー？もうちょっと北だね」</b></nobr><br>
-<nobr><b>1009,116,1,バッファローを発見しました,バッファローの角</b></nobr><br>
-となっています。<br>
-各行の意味は、<br>
-<nobr><b>エリアナンバー,港ナンバー,ポイントナンバー,メッセージ(,財宝)</b></nobr><br>
-となっています。<br>
-港ナンバー等はエリアデータ（1001～1009.dat）を参照してください。<br>
-エリアデータの各行の先頭が港ナンバーです。<br>
-ポイントナンバーは1=港、2=交易品屋、3=造船所、4=酒場、5=町、6=襲撃、です。<br>
-港ナンバーの港の、ポイントナンバーの場所にいると、メッセージが表示されます。<br>
-最後の行にのみ、もう一つ要素を付け加えることが出来て、<br>
-これがある場合、財宝として入手することになります。<br>
-つまり、この例の場合、「ハバナ」の「港」に着いた瞬間、「バッファローの角」が入手されます。<br>
-メッセージには次のメッセージ表示ポイントへのヒントを書くと良いでしょう。<br>
-いろいろなデータを見て、検討してみてください。<br>
-新しく冒険情報のデータを作成する場合、ファイル名は何でも良いので（ただし数字は×）拡張子を.datにして下さい。<br>
-そして、「a_list.dat」にデータを追加する必要があります。<br>
-<nobr><b>1009&lt;&gt;&lt;&gt;1400&lt;&gt;cow.dat&lt;&gt;「この大陸の北の方には、力強い牛がいるよ。」&lt;&gt;</b></nobr><br>
-という行があると思います。これは<br>
-<nobr><b>情報販売エリア&lt;&gt;情報販売港&lt;&gt;価格&lt;&gt;ファイル名&lt;&gt;買ったときに表示されるメッセージ&lt;&gt;</b></nobr><br>
-となっています。（最後に&lt;&gt;を必ず入れてください！）<br>
-同じようにして新しく作った冒険情報に合わせて追加してください。<br><br>
-次に船ですが、データの説明だけしておきます。<br>
-船のデータが入っているのはitem.datです。<br>
+<LI>應用<br><br>
+冒險情報、船隻、交易品等，可透過修改 data 資料夾中的資料<br>
+自由新增或刪除。<br>
+首先說明冒險情報。<br><br>
+例如查看 cow.dat 的內容，會看到<br>
+<nobr><b>1009,115,4,「水牛？再往北一點吧」</b></nobr><br>
+<nobr><b>1009,116,1,發現了水牛,水牛的角</b></nobr><br>
+如下所示。<br>
+各行的意義為：<br>
+<nobr><b>區域編號,港口編號,地點編號,訊息(,寶物)</b></nobr><br>
+港口編號等請參照區域資料（1001～1009.dat）。<br>
+區域資料各行開頭即為港口編號。<br>
+地點編號為 1=港口、2=交易品店、3=造船所、4=酒館、5=城鎮、6=襲擊。<br>
+當位於該港口編號港口中的指定地點編號位置時，會顯示訊息。<br>
+只有最後一行可以再加入一個要素，<br>
+若有此要素，便會作為寶物取得。<br>
+也就是說，在這個例子中，抵達「哈瓦那」的「港口」瞬間，便會取得「水牛的角」。<br>
+建議在訊息中寫下前往下一個訊息顯示地點的提示。<br>
+請參考各種資料後再進行調整。<br>
+若要建立新的冒險情報資料，檔名可任意命名（但不可使用數字），副檔名請設為 .dat。<br>
+接著，需要在「a_list.dat」中新增資料。<br>
+<nobr><b>1009&lt;&gt;&lt;&gt;1400&lt;&gt;cow.dat&lt;&gt;「這片大陸的北方，有一種強壯的牛喔。」&lt;&gt;</b></nobr><br>
+應該會有類似這樣的一行。其意義為：<br>
+<nobr><b>情報販售區域&lt;&gt;情報販售港口&lt;&gt;價格&lt;&gt;檔名&lt;&gt;購買時顯示的訊息&lt;&gt;</b></nobr><br>
+（最後一定要加入 &lt;&gt;！）<br>
+請以同樣方式，配合新建立的冒險情報加以新增。<br><br>
+接著是船隻，這裡僅說明資料格式。<br>
+船隻資料存放於 item.dat。<br>
 <nobr><b>バルシャ&lt;&gt;1&lt;&gt;balsha.gif&lt;&gt;1001&lt;&gt;&lt;&gt;50&lt;&gt;70&lt;&gt;8&lt;&gt;1200&lt;&gt;</b></nobr><br>
-一行目は以上のようになっています。意味は以下の通りです。<br>
-<nobr><b>名前&lt;&gt;（船の場合は1）&lt;&gt;画像ファイル&lt;&gt;販売エリア&lt;&gt;販売港&lt;&gt;積載量&lt;&gt;HP&lt;&gt;速度&lt;&gt;価格&lt;&gt;</b></nobr><br><br>
-交易品に関してはエリアデータの各行が各港に対応しています。<br>
-これもデータの説明だけしておきます。<br>
-<nobr><b>001&lt;&gt;リスボン&lt;&gt;38,-9&lt;&gt;岩塩,30△オリーブ油,100△鉄砲,200△大砲,300△銀,280△金,550△骨董品,300&lt;&gt;1</b></nobr><br>
-これは<br>
-<nobr><b>港ナンバー&lt;&gt;名前&lt;&gt;北緯（南緯の場合は-）,東経（西経の場合は-）&lt;&gt;取り扱い積荷名1,価格1△取り扱い積荷名2,価格2（△で区切って入れる）&lt;&gt;物価指数&lt;&gt;</b></nobr><br>
-となっています。<br><br>
+第一行如上所示。其意義如下：<br>
+<nobr><b>名稱&lt;&gt;（船隻時為 1）&lt;&gt;圖片檔案&lt;&gt;販售區域&lt;&gt;販售港口&lt;&gt;載貨量&lt;&gt;HP&lt;&gt;速度&lt;&gt;價格&lt;&gt;</b></nobr><br><br>
+關於交易品，區域資料中的各行分別對應各港口。<br>
+這裡也僅說明資料格式。<br>
+<nobr><b>001&lt;&gt;里斯本&lt;&gt;38,-9&lt;&gt;岩鹽,30△橄欖油,100△火槍,200△大砲,300△銀,280△金,550△古董品,300&lt;&gt;1</b></nobr><br>
+其意義為：<br>
+<nobr><b>港口編號&lt;&gt;名稱&lt;&gt;北緯（南緯時為 -）,東經（西經時為 -）&lt;&gt;販售貨物名稱1,價格1△販售貨物名稱2,價格2（以 △ 分隔輸入）&lt;&gt;物價指數&lt;&gt;</b></nobr><br>
+如下所示。<br><br>
 <br>
-<LI>謝辞<br><br>
-「ネット航海時代」の作成に付きまして、<a href="http://www.area-s.com/" target="_blank">Missing Link</a>様の「PeoPle」を
-大変参考にさせていただきました。<br>
-また、そのまま流用させていただいたサブルーチンも多数あります。<br>
-詳細は以下の通りです。<br>
-流用：<br>
-sub add_record,sub open_dat,sub write_dat,sub get_date,sub get_host,sub get_cookie,sub set_cookie,sub decode,javascript部分<br><br>
-特に参考にさせていただいたもの：<br>
-sub player_list,sub id_list,sub get_iuser,sub set_iuser,sub get_alluser,sub history等、多数<br><br>
-非常に多くの部分を活用させていただきました。<br>
-ここで改めてお礼申し上げます。<br>
+<LI>致謝<br><br>
+在製作「網路航海時代」時，<a href="http://www.area-s.com/" target="_blank">Missing Link</a> 先生／女士的「PeoPle」
+提供了極大的參考。<br>
+此外，也有許多子程序直接沿用。<br>
+詳細如下。<br>
+沿用：<br>
+sub add_record,sub open_dat,sub write_dat,sub get_date,sub get_host,sub get_cookie,sub set_cookie,sub decode,javascript 部分<br><br>
+特別參考的項目：<br>
+sub player_list,sub id_list,sub get_iuser,sub set_iuser,sub get_alluser,sub history 等，數量眾多<br><br>
+我們運用了非常多的部分。<br>
+在此再次致上謝意。<br>
 </UL>
 </blockquote>
 <br><center><a href="http://www.kosumi.vxx.jp/">Net Castle</a></center><br>
